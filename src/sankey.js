@@ -97,10 +97,12 @@ export default function() {
     // Compute the value (size) of each node by summing the associated links.
     function computeNodeValues() {
         nodes.forEach(function(node) {
-            node.value = Math.max(
-                sum(node.sourceLinks, value),
-                sum(node.targetLinks, value)
-            );
+            // node.value = Math.max(
+            //     sum(node.sourceLinks, value),
+            //     sum(node.targetLinks, value)
+            // );
+            node.name==='人体肠道自主合成'?
+            (node.value = 80):(node.value=40) ;
         });
     }
 
@@ -158,11 +160,13 @@ export default function() {
     function computeNodeDepths(iterations) {
         var nodesByBreadth = nest()
             .key(function(d) {
-                return d.x; })
+                return d.x;
+            })
             .sortKeys(ascending)
             .entries(nodes)
             .map(function(d) {
-                return d.values; });
+                return d.values;
+            });
 
         //
         initializeNodeDepth();
