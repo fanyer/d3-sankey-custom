@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "d3-sankey@^0.4.1",
+        "scope": null,
+        "escapedName": "d3-sankey",
+        "name": "d3-sankey",
+        "rawSpec": "^0.4.1",
+        "spec": ">=0.4.1 <0.5.0",
+        "type": "range"
+      },
+      "/Users/fanyeer/program/go_workspace/src/pkgo.in/fanyer/data2canvas"
+    ]
+  ],
+  "_from": "d3-sankey@>=0.4.1 <0.5.0",
+  "_id": "d3-sankey@0.4.1",
+  "_inCache": true,
+  "_location": "/d3-sankey",
+  "_nodeVersion": "6.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/d3-sankey-0.4.1.tgz_1473098297902_0.9881360027939081"
+  },
+  "_npmUser": {
+    "name": "xaranke",
+    "email": "kshitij.aranke@gmail.com"
+  },
+  "_npmVersion": "3.10.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "d3-sankey@^0.4.1",
+    "scope": null,
+    "escapedName": "d3-sankey",
+    "name": "d3-sankey",
+    "rawSpec": "^0.4.1",
+    "spec": ">=0.4.1 <0.5.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/d3-sankey/-/d3-sankey-0.4.1.tgz",
+  "_shasum": "074b3501f0e9c9f4b05429930d0ef1cc0feb85f7",
+  "_shrinkwrap": null,
+  "_spec": "d3-sankey@^0.4.1",
+  "_where": "/Users/fanyeer/program/go_workspace/src/pkgo.in/fanyer/data2canvas",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike"
+  },
+  "bugs": {
+    "url": "https://github.com/d3/d3-sankey/issues"
+  },
+  "dependencies": {
+    "d3-array": "^1.0.1",
+    "d3-collection": "^1.0.1",
+    "d3-interpolate": "^1.1.1"
+  },
+  "description": "Visualize flow between nodes in a directed acyclic network.",
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "json2module": "0.0.3",
+    "package-preamble": "0.0.2",
+    "rollup": "^0.34.13",
+    "tape": "^4.6.0",
+    "uglify-js": "^2.7.3"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "074b3501f0e9c9f4b05429930d0ef1cc0feb85f7",
+    "tarball": "https://registry.npmjs.org/d3-sankey/-/d3-sankey-0.4.1.tgz"
+  },
+  "gitHead": "4d2eb2b0e600bc8887f6820c87058db05a0b2e78",
+  "homepage": "https://github.com/d3/d3-sankey",
+  "jsnext:main": "index",
+  "keywords": [
+    "d3",
+    "sankey"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-sankey.js",
+  "maintainers": [
+    {
+      "name": "mbostock",
+      "email": "mike@ocks.org"
+    },
+    {
+      "name": "xaranke",
+      "email": "kshitij.aranke@gmail.com"
+    }
+  ],
+  "name": "d3-sankey",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3/d3-sankey.git"
+  },
+  "scripts": {
+    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cd ../d3.github.com && git pull && cp ../d3-sankey/build/d3-sankey.js d3-sankey.v0.3.js && cp ../d3-sankey/build/d3-sankey.min.js d3-sankey.v0.3.min.js && cd - && zip -j build/d3-sankey.zip -- LICENSE README.md build/d3-sankey.js build/d3-sankey.min.js",
+    "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" build/d3-sankey.js -c -m -o build/d3-sankey.min.js",
+    "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -g d3-array:d3,d3-collection:d3,d3-interpolate:d3 -f umd -n d3 -o build/d3-sankey.js -- index.js",
+    "test": "tape 'test/**/*-test.js' && eslint index.js src"
+  },
+  "version": "0.4.1"
+}
