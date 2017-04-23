@@ -104,7 +104,7 @@ var sankey = function() {
             //     sum(node.targetLinks, value)
             // );
             node.name==='人体肠道自主合成'?
-            (node.value = 80):(node.value=40) ;
+            (node.value = 120):(node.value=80) ;
         });
     }
 
@@ -274,11 +274,14 @@ var sankey = function() {
             var sy = 0,
                 ty = 0;
             node.sourceLinks.forEach(function(link) {
+                // fanyer startpoint to center
                 link.sy = sy+15;
                 sy += link.dy;
             });
             node.targetLinks.forEach(function(link) {
-                link.ty = ty;
+                // fanyer endpoint to center
+
+                link.ty = ty+8;
                 ty += link.dy;
             });
         });
