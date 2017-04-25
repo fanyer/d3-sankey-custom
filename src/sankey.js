@@ -101,8 +101,12 @@ export default function() {
             //     sum(node.sourceLinks, value),
             //     sum(node.targetLinks, value)
             // );
-            node.name==='人体肠道自主合成'?
-            (node.value = 80):(node.value=40) ;
+            /**
+             * fanyer 2017.4.25
+             */
+            // node.name==='人体肠道自主合成'?
+            // (node.value = 120):(node.value=80) ;
+            node.value = 80
         });
     }
 
