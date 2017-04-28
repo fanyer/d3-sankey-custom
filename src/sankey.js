@@ -276,11 +276,14 @@ export default function() {
             var sy = 0,
                 ty = 0;
             node.sourceLinks.forEach(function(link) {
-                link.sy = sy;
+                // fanyer startpoint to center
+                link.sy = sy + 15;
                 sy += link.dy;
             });
             node.targetLinks.forEach(function(link) {
-                link.ty = ty;
+                // fanyer endpoint to center
+
+                link.ty = ty + 8;
                 ty += link.dy;
             });
         });
